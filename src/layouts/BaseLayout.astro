@@ -1,0 +1,23 @@
+---
+const{title="THIS IS A PAGE"} = Astro.props;
+---
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+	<style global>
+    @import "../styles/global.css";
+    @import "../styles/home.css";
+	</style>
+</head>
+<body>
+	<main>
+		<slot/>
+	</main>
+</body>
+</html>
