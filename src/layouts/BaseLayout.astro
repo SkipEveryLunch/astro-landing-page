@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro"
+import '../styles/global.css'
 const{title="THIS IS A PAGE"} = Astro.props;
 ---
 
@@ -8,13 +9,7 @@ const{title="THIS IS A PAGE"} = Astro.props;
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>{title}</title>
-
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-	<style global>
-    @import "../styles/global.css";
-    @import "../styles/home.css";
-	</style>
 </head>
 <body>
   <Navbar/>
