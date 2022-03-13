@@ -1,4 +1,5 @@
 ---
+import Navbar from "../components/Navbar.astro"
 const{title="THIS IS A PAGE"} = Astro.props;
 ---
 
@@ -16,6 +17,7 @@ const{title="THIS IS A PAGE"} = Astro.props;
 	</style>
 </head>
 <body>
+  <Navbar/>
 	<main>
 		<slot/>
 	</main>
