@@ -19,5 +19,11 @@ const{title="THIS IS A PAGE"} = Astro.props;
 	<main>
 		<slot/>
 	</main>
+  <footer>
+    <small>Copyright ⓒ <span id="copyrightYear"></span>SkipEveryLunch</small>
+  </footer>
+  <script>
+    document.getElementById("copyrightYear").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
