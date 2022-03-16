@@ -12,13 +12,15 @@ const{title="THIS IS A PAGE"} = Astro.props;
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
-  <Navbar/>
-	<main>
-		<slot/>
-	</main>
-  <footer>
-    <small>Copyright ⓒ <span id="copyrightYear"></span>SkipEveryLunch</small>
-  </footer>
+  <div class="wrapper">
+    <Navbar/>
+    <main>
+      <slot/>
+    </main>
+    <footer class="blur">
+      <small>Copyright ⓒ <span id="copyrightYear"></span>SkipEveryLunch</small>
+    </footer>
+  </div>
   <script>
     document.getElementById("copyrightYear").textContent = new Date().getFullYear();
   </script>
