@@ -227,7 +227,7 @@ small {
   transform: rotate(20deg);
 }
 
-@media screen (min-width: 768px) {
+@media (min-width: 768px) {
   .blur::after,
   .blur::before {
     filter: blur(120px);
