@@ -328,9 +328,12 @@ header {
 
 .service--icon {
   background-color: hsl(var(--muted));
-  border-radius: 100%;
+  border-radius: 50%;
   width: max-content;
-  padding: var(--size-2);
+  padding: clamp(0.6rem, 3vw, 0.8rem);
+}
+.service--icon svg {
+  width: var(--size-fluid-2);
 }
 
 /* FOOTER */
