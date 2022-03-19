@@ -326,6 +326,13 @@ header {
   gap: var(--size-2);
 }
 
+.service--icon {
+  background-color: hsl(var(--muted));
+  border-radius: 100%;
+  width: max-content;
+  padding: var(--size-2);
+}
+
 /* FOOTER */
 
 footer {

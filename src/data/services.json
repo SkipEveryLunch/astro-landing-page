@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Custom Coding",
+    "icon": "code",
+    "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "name": "User Friendly",
+    "icon": "users",
+    "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "name": "SEO Optimized",
+    "icon": "search",
+    "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "name": "Build for Growth",
+    "icon": "trending-up",
+    "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "name": "Ready for Mobile",
+    "icon": "smartphone",
+    "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "name": "Feels like you",
+    "icon": "home",
+    "content": "Vel eget eu vestibulum mauris et ut hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  }
+]
