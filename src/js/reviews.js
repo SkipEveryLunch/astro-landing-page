@@ -33,7 +33,6 @@ const handleButtonClick = (e) => {
     currentIndex--;
   }
   moveSlider();
-  isMoving = false;
 };
 btns.forEach((btn) => {
   btn.addEventListener('click', handleButtonClick);
@@ -51,7 +50,6 @@ indicators.forEach((ind) => {
   ind.addEventListener('click', handleIndicatorClick);
 });
 slider.addEventListener('transitionend', () => {
-  isMoving = false;
   if (currentIndex === 0) {
     currentIndex = reviews.length - 2;
     slider.style.transitionDuration = '1ms';
@@ -63,4 +61,5 @@ slider.addEventListener('transitionend', () => {
   } else {
     slider.style.transitionDuration = '300ms';
   }
+  isMoving = false;
 });
