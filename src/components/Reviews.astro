@@ -1,0 +1,44 @@
+---
+import  data from "../data/reviews.json"
+import {Icon} from "astro-icon";
+---
+
+<section class="reviews-wrapper blur">
+  <div class="review-container">
+  <button class="review-btn grid-sm review-btn--next" id="next" area-label="Next Label">
+    <Icon name="feather:chevron-left" width={50}/>
+  </button>
+  <div class="reviews">
+    {data.map(r=>(
+      <div class="reviews grid-sm">
+        <img src={r.avatar} alt={`Avatar of ${r.name}`}>
+        <p class="review--content">{r.content}</p>
+        <p class="review--name text-gradient h3">{r.name}</p>
+      </div>
+    ))}
+    {data.slice(data.length-1).map(r=>(
+      <div class="reviews grid-sm">
+        <img src={r.avatar} alt={`Avatar of ${r.name}`}>
+        <p class="review--content">{r.content}</p>
+        <p class="review--name text-gradient h3">{r.name}</p>
+      </div>
+    ))}
+    {data.map(r=>(
+      <div class="reviews grid-sm">
+        <img src={r.avatar} alt={`Avatar of ${r.name}`}>
+        <p class="review--content">{r.content}</p>
+        <p class="review--name text-gradient h3">{r.name}</p>
+      </div>
+    ))}
+  </div>
+  <div class="indicator-container">
+  {data.slice(0,1).map(r=>(
+    <button class={`indicator ${r?.active && 'active'}`}></button>
+  ))}
+  </div>
+  <button class="review-btn grid-sm review-btn--prev" id="prev" area-label="Previous Label">
+    <Icon name="feather:chevron-right" width={50}/>
+  </button>
+  </div>
+</section>
+<script type="module" src={(await import("../js/reviews.js?url")).default}></script>

@@ -336,6 +336,33 @@ header {
   width: var(--size-fluid-2);
 }
 
+/* REVIEWS */
+.reviews-wrapper {
+  background-color: hsl(var(--bkg));
+  margin: 0 calc(var(--size-fluid-2) * -1);
+}
+.reviews-wrapper::after,
+.reviews-wrapper::before {
+  inset-inline: 20%;
+}
+.reviews-container {
+  overflow: hidden;
+  position: relative;
+  width: calc(100vw - var(--size-fluid-2));
+  background-color: hsl(var(--bkg));
+}
+.reviews {
+  display: flex;
+  margin: var(--size-fluid-4) 0 var(--size-fluid-5);
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
+.review-btn {
+  background-color: transparent;
+  color: hsl(var(--muted));
+  border: none;
+}
 /* FOOTER */
 
 footer {
