@@ -4,40 +4,41 @@ import {Icon} from "astro-icon";
 ---
 
 <section class="reviews-wrapper blur">
-  <div class="review-container">
-  <button class="review-btn grid-sm review-btn--next" id="next" area-label="Next Label">
-    <Icon name="feather:chevron-left" width={50}/>
-  </button>
+  <h2 class="sr-only">Reviews</h2>
+  <div class="reviews-container container-xs">
+    <button class="review-btn grid-sm review-btn--prev" id="prev" area-label="Previous Label">
+      <Icon name="feather:chevron-left" width={50}/>
+    </button>
   <div class="reviews">
-    {data.map(r=>(
-      <div class="reviews grid-sm">
-        <img src={r.avatar} alt={`Avatar of ${r.name}`}>
-        <p class="review--content">{r.content}</p>
-        <p class="review--name text-gradient h3">{r.name}</p>
-      </div>
-    ))}
     {data.slice(data.length-1).map(r=>(
-      <div class="reviews grid-sm">
-        <img src={r.avatar} alt={`Avatar of ${r.name}`}>
+      <div class="review grid-sm">
+        <img class="review-avatar" src={r.avatar} alt={`Avatar of ${r.name}`}>
         <p class="review--content">{r.content}</p>
         <p class="review--name text-gradient h3">{r.name}</p>
       </div>
     ))}
     {data.map(r=>(
-      <div class="reviews grid-sm">
-        <img src={r.avatar} alt={`Avatar of ${r.name}`}>
+      <div class="review grid-sm">
+        <img class="review-avatar" src={r.avatar} alt={`Avatar of ${r.name}`}>
+        <p class="review--content">{r.content}</p>
+        <p class="review--name text-gradient h3">{r.name}</p>
+      </div>
+    ))}
+    {data.slice(0,1).map(r=>(
+      <div class="review grid-sm">
+        <img class="review-avatar" src={r.avatar} alt={`Avatar of ${r.name}`}>
         <p class="review--content">{r.content}</p>
         <p class="review--name text-gradient h3">{r.name}</p>
       </div>
     ))}
   </div>
   <div class="indicator-container">
-  {data.slice(0,1).map(r=>(
+  {data.map((r,idx)=>(
     <button class={`indicator ${r?.active && 'active'}`}></button>
   ))}
   </div>
-  <button class="review-btn grid-sm review-btn--prev" id="prev" area-label="Previous Label">
-    <Icon name="feather:chevron-right" width={50}/>
+  <button class="review-btn grid-sm review-btn--next" id="next" area-label="Next Label">
+      <Icon name="feather:chevron-right" width={50}/>
   </button>
   </div>
 </section>
